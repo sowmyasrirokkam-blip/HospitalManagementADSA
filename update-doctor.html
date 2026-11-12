@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Update Doctor</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f8fb;
+            color: #263238;
+        }
+
+        /* HEADER */
+
+        header {
+            background: #0b6e8e;
+            color: white;
+
+            padding: 18px 60px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* PAGE */
+
+        .page {
+            max-width: 650px;
+
+            margin: 50px auto;
+
+            padding: 40px;
+
+            background: white;
+
+            border-radius: 14px;
+
+            box-shadow:
+                0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        h1 {
+            text-align: center;
+
+            color: #0b6e8e;
+
+            font-size: 36px;
+
+            margin-bottom: 30px;
+        }
+
+        /* FORM */
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+
+            margin-bottom: 7px;
+
+            font-weight: bold;
+        }
+
+        input,
+        select {
+            width: 100%;
+
+            padding: 12px;
+
+            border: 1px solid #b0bec5;
+
+            border-radius: 6px;
+
+            font-size: 15px;
+        }
+
+        input:focus,
+        select:focus {
+            outline: none;
+
+            border-color: #0b6e8e;
+        }
+
+        /* BUTTONS */
+
+        .buttons {
+            display: flex;
+
+            gap: 15px;
+
+            margin-top: 30px;
+        }
+
+        button,
+        .back-btn {
+            padding: 12px 25px;
+
+            border: none;
+
+            border-radius: 6px;
+
+            font-size: 15px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            text-decoration: none;
+        }
+
+        button {
+            background: #0b6e8e;
+
+            color: white;
+        }
+
+        button:hover {
+            background: #07556d;
+        }
+
+        .back-btn {
+            background: #607d8b;
+
+            color: white;
+        }
+
+        .back-btn:hover {
+            background: #455a64;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #263238;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 22px;
+
+            margin-top: 50px;
+
+            font-size: 14px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="logo">
+            🏥 Hospital Management
+        </div>
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="doctors.html">
+                Doctor Management
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- UPDATE FORM -->
+
+    <section class="page">
+
+        <h1>✏️ Update Doctor</h1>
+
+
+        <form>
+
+            <!-- Doctor ID -->
+
+            <div class="form-group">
+
+                <label for="doctorId">
+                    Doctor ID
+                </label>
+
+                <input
+                    type="number"
+                    id="doctorId"
+                    name="doctorId"
+                    placeholder="Enter Doctor ID"
+                    required>
+
+            </div>
+
+
+            <!-- Doctor Name -->
+
+            <div class="form-group">
+
+                <label for="doctorName">
+                    Doctor Name
+                </label>
+
+                <input
+                    type="text"
+                    id="doctorName"
+                    name="doctorName"
+                    placeholder="Enter Doctor Name"
+                    required>
+
+            </div>
+
+
+            <!-- Specialization -->
+
+            <div class="form-group">
+
+                <label for="specialization">
+                    Specialization
+                </label>
+
+                <select
+                    id="specialization"
+                    name="specialization"
+                    required>
+
+                    <option value="">
+                        Select Specialization
+                    </option>
+
+                    <option>
+                        Cardiologist
+                    </option>
+
+                    <option>
+                        Neurologist
+                    </option>
+
+                    <option>
+                        Orthopedic
+                    </option>
+
+                    <option>
+                        Dermatologist
+                    </option>
+
+                    <option>
+                        Pediatrician
+                    </option>
+
+                    <option>
+                        General Physician
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- Phone -->
+
+            <div class="form-group">
+
+                <label for="phone">
+                    Phone
+                </label>
+
+                <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="Enter Phone Number"
+                    required>
+
+            </div>
+
+
+            <!-- Email -->
+
+            <div class="form-group">
+
+                <label for="email">
+                    Email
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter Email Address"
+                    required>
+
+            </div>
+
+
+            <!-- Experience -->
+
+            <div class="form-group">
+
+                <label for="experience">
+                    Experience (Years)
+                </label>
+
+                <input
+                    type="number"
+                    id="experience"
+                    name="experience"
+                    placeholder="Enter Experience">
+
+            </div>
+
+
+            <!-- BUTTONS -->
+
+            <div class="buttons">
+
+                <button type="submit">
+                    Update Doctor
+                </button>
+
+                <a
+                    href="doctors.html"
+                    class="back-btn">
+
+                    ← Back
+
+                </a>
+
+            </div>
+
+        </form>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        © 2026 Hospital Management System
+
+    </footer>
+
+
+</body>
+
+</html>

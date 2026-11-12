@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Appointment - Hospital Management</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f8fb;
+            color: #333;
+        }
+
+        header {
+            background: #0b6e8e;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin-bottom: 8px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 650px;
+            margin: 40px auto;
+        }
+
+        .form-box {
+            background: white;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .form-box h2 {
+            text-align: center;
+            color: #0b6e8e;
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 7px;
+            font-weight: bold;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        input:focus,
+        select:focus {
+            outline: none;
+            border-color: #0b6e8e;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 13px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 6px;
+            background: #0b6e8e;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background: #09566f;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 22px;
+            background: #555;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+
+        .back-btn:hover {
+            background: #333;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Add Appointment</h1>
+        <p>Schedule a new patient appointment</p>
+    </header>
+
+    <div class="container">
+
+        <div class="form-box">
+
+            <h2>Appointment Details</h2>
+
+            <form>
+
+                <div class="form-group">
+                    <label for="appointmentId">Appointment ID</label>
+                    <input type="number"
+                           id="appointmentId"
+                           name="appointmentId"
+                           placeholder="Enter appointment ID"
+                           required>
+                </div>
+
+                <div class="form-group">
+                    <label for="patientId">Patient ID</label>
+                    <input type="number"
+                           id="patientId"
+                           name="patientId"
+                           placeholder="Enter patient ID"
+                           required>
+                </div>
+
+                <div class="form-group">
+                    <label for="doctorId">Doctor ID</label>
+                    <input type="number"
+                           id="doctorId"
+                           name="doctorId"
+                           placeholder="Enter doctor ID"
+                           required>
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Appointment Date</label>
+                    <input type="date"
+                           id="date"
+                           name="date"
+                           required>
+                </div>
+
+                <div class="form-group">
+                    <label for="time">Appointment Time</label>
+                    <input type="time"
+                           id="time"
+                           name="time"
+                           required>
+                </div>
+
+                <div class="form-group">
+                    <label for="type">Appointment Type</label>
+                    <select id="type" name="type" required>
+                        <option value="">Select Type</option>
+                        <option value="Consultation">Consultation</option>
+                        <option value="Follow-up">Follow-up</option>
+                        <option value="Emergency">Emergency</option>
+                        <option value="Check-up">Check-up</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    Add Appointment
+                </button>
+
+            </form>
+
+        </div>
+
+        <a href="appointments.html" class="back-btn">
+            ← Back to Appointment Management
+        </a>
+
+    </div>
+
+</body>
+</html>

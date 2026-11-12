@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Add Doctor</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f8fb;
+            color: #263238;
+        }
+
+        header {
+            background: #0b6e8e;
+            color: white;
+            padding: 18px 60px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .page {
+            max-width: 650px;
+            margin: 50px auto;
+            padding: 40px;
+
+            background: white;
+
+            border-radius: 14px;
+
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        h1 {
+            text-align: center;
+            color: #0b6e8e;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 7px;
+            font-weight: bold;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 12px;
+
+            border: 1px solid #b0bec5;
+            border-radius: 6px;
+
+            font-size: 15px;
+        }
+
+        .buttons {
+            margin-top: 30px;
+
+            display: flex;
+            gap: 15px;
+        }
+
+        button,
+        .back-btn {
+            padding: 12px 25px;
+
+            border: none;
+            border-radius: 6px;
+
+            font-size: 15px;
+            font-weight: bold;
+
+            cursor: pointer;
+
+            text-decoration: none;
+        }
+
+        button {
+            background: #0b6e8e;
+            color: white;
+        }
+
+        button:hover {
+            background: #07556d;
+        }
+
+        .back-btn {
+            background: #607d8b;
+            color: white;
+        }
+
+        .back-btn:hover {
+            background: #455a64;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo">
+            🏥 Hospital Management
+        </div>
+
+        <nav>
+
+            <a href="index.html">Home</a>
+
+            <a href="doctors.html">Doctor Management</a>
+
+        </nav>
+
+    </header>
+
+
+    <div class="page">
+
+        <h1>➕ Add Doctor</h1>
+
+
+        <form>
+
+            <div class="form-group">
+
+                <label>Doctor ID</label>
+
+                <input
+                    type="number"
+                    placeholder="Enter Doctor ID"
+                    required>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Doctor Name</label>
+
+                <input
+                    type="text"
+                    placeholder="Enter Doctor Name"
+                    required>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Specialization</label>
+
+                <select required>
+
+                    <option value="">Select Specialization</option>
+
+                    <option>Cardiologist</option>
+
+                    <option>Neurologist</option>
+
+                    <option>Orthopedic</option>
+
+                    <option>Dermatologist</option>
+
+                    <option>Pediatrician</option>
+
+                    <option>General Physician</option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Phone</label>
+
+                <input
+                    type="tel"
+                    placeholder="Enter Phone Number"
+                    required>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Email</label>
+
+                <input
+                    type="email"
+                    placeholder="Enter Email Address"
+                    required>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Experience (Years)</label>
+
+                <input
+                    type="number"
+                    placeholder="Enter Experience">
+
+            </div>
+
+
+            <div class="buttons">
+
+                <button type="submit">
+                    Add Doctor
+                </button>
+
+                <a href="doctors.html" class="back-btn">
+                    ← Back
+                </a>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>

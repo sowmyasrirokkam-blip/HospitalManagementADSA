@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hospital Management System</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f8fb;
+            color: #263238;
+        }
+
+        /* HEADER */
+
+        header {
+            background: #0b6e8e;
+            color: white;
+
+            padding: 18px 60px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* HERO */
+
+        .hero {
+            text-align: center;
+            background: white;
+            padding: 90px 20px 80px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            color: #0b6e8e;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: 0 auto 30px;
+
+            font-size: 18px;
+            line-height: 1.7;
+
+            color: #607d8b;
+        }
+
+        .login-btn {
+            display: inline-block;
+
+            background: #0b6e8e;
+            color: white;
+
+            padding: 13px 32px;
+
+            border-radius: 6px;
+
+            text-decoration: none;
+
+            font-size: 16px;
+            font-weight: bold;
+
+            transition: 0.2s;
+        }
+
+        .login-btn:hover {
+            background: #07556d;
+            transform: translateY(-2px);
+        }
+
+        /* SERVICES */
+
+        .services {
+            padding: 65px 8%;
+        }
+
+        .services h2 {
+            text-align: center;
+
+            font-size: 32px;
+
+            margin-bottom: 40px;
+
+            color: #263238;
+        }
+
+        .service-container {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 25px;
+        }
+
+        /* CARDS */
+
+        .service-card {
+            background: white;
+
+            padding: 35px 25px;
+
+            border-radius: 12px;
+
+            text-align: center;
+
+            box-shadow:
+                0 4px 15px rgba(0, 0, 0, 0.08);
+
+            transition: 0.25s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .icon {
+            font-size: 45px;
+            margin-bottom: 18px;
+        }
+
+        .service-card h3 {
+            color: #0b6e8e;
+
+            font-size: 20px;
+
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            color: #607d8b;
+
+            line-height: 1.6;
+
+            font-size: 15px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #263238;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 22px;
+
+            margin-top: 20px;
+
+            font-size: 14px;
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 900px) {
+
+            .service-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+        @media (max-width: 600px) {
+
+            header {
+                padding: 18px 25px;
+
+                flex-direction: column;
+
+                gap: 15px;
+            }
+
+            .hero {
+                padding: 60px 20px;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .service-container {
+                grid-template-columns: 1fr;
+            }
+
+            .services {
+                padding: 45px 20px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="logo">
+            🏥 Hospital Management
+        </div>
+
+        <nav>
+
+            <a href="index.html">Home</a>
+
+            <a href="login.html">Login</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- HERO SECTION -->
+
+    <section class="hero">
+
+        <h1>
+            Hospital Management System
+        </h1>
+
+        <p>
+            Manage patients, doctors, appointments,
+            emergency services and medical records efficiently.
+        </p>
+
+        <a href="login.html" class="login-btn">
+            Login
+        </a>
+
+    </section>
+    <!-- SERVICES -->
+
+<section class="services">
+
+    <h2>Our Services</h2>
+
+    <div class="service-container">
+
+        <!-- PATIENT MANAGEMENT -->
+        <a href="patients.html" class="service-card">
+
+            <div class="icon">👨‍⚕️</div>
+
+            <h3>Patient Management</h3>
+
+            <p>
+                Manage patient information and medical details.
+            </p>
+
+        </a>
+
+
+        <!-- DOCTOR MANAGEMENT -->
+        <a href="doctors.html" class="service-card">
+
+            <div class="icon">🩺</div>
+
+            <h3>Doctor Management</h3>
+
+            <p>
+                Manage doctors and their specializations.
+            </p>
+
+        </a>
+
+
+        <!-- APPOINTMENTS -->
+        <a href="appointments.html" class="service-card">
+
+            <div class="icon">📅</div>
+
+            <h3>Appointments</h3>
+
+            <p>
+                Schedule and manage patient appointments.
+            </p>
+
+        </a>
+
+
+        <!-- EMERGENCY CARE -->
+        <a href="emergency.html" class="service-card">
+
+            <div class="icon">🚑</div>
+
+            <h3>Emergency Care</h3>
+
+            <p>
+                Handle emergency patients according to priority.
+            </p>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        © 2026 Hospital Management System
+
+    </footer>
+
+
+</body>
+
+</html>

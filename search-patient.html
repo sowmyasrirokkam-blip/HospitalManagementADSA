@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Search Patient - Hospital Management System</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f8fb;
+            color: #263238;
+            min-height: 100vh;
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* HEADER */
+
+        header {
+            background: #0b6e8e;
+            color: white;
+
+            padding: 18px 60px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* MAIN */
+
+        .search-section {
+            flex: 1;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 50px 20px;
+        }
+
+        /* SEARCH CARD */
+
+        .search-card {
+            background: white;
+
+            width: 100%;
+            max-width: 500px;
+
+            padding: 45px;
+
+            border-radius: 12px;
+
+            box-shadow:
+                0 5px 25px rgba(0, 0, 0, 0.10);
+        }
+
+        .search-icon {
+            text-align: center;
+
+            font-size: 50px;
+
+            margin-bottom: 15px;
+        }
+
+        .search-card h1 {
+            text-align: center;
+
+            color: #0b6e8e;
+
+            font-size: 30px;
+
+            margin-bottom: 10px;
+        }
+
+        .description {
+            text-align: center;
+
+            color: #607d8b;
+
+            font-size: 14px;
+
+            margin-bottom: 30px;
+        }
+
+        /* FORM */
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+
+            margin-bottom: 8px;
+
+            font-weight: bold;
+
+            color: #37474f;
+        }
+
+        input {
+            width: 100%;
+
+            padding: 13px 14px;
+
+            border: 1px solid #cfd8dc;
+
+            border-radius: 6px;
+
+            font-size: 15px;
+
+            outline: none;
+        }
+
+        input:focus {
+            border-color: #0b6e8e;
+
+            box-shadow:
+                0 0 0 2px rgba(11, 110, 142, 0.10);
+        }
+
+        /* BUTTONS */
+
+        .button-container {
+            display: flex;
+
+            gap: 15px;
+        }
+
+        .btn {
+            flex: 1;
+
+            padding: 13px;
+
+            border: none;
+
+            border-radius: 6px;
+
+            text-align: center;
+
+            font-size: 16px;
+
+            font-weight: bold;
+
+            text-decoration: none;
+
+            cursor: pointer;
+        }
+
+        .search-btn {
+            background: #0b6e8e;
+
+            color: white;
+        }
+
+        .search-btn:hover {
+            background: #07556d;
+        }
+
+        .back-btn {
+            background: #eceff1;
+
+            color: #37474f;
+        }
+
+        .back-btn:hover {
+            background: #cfd8dc;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #263238;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 20px;
+
+            font-size: 14px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 600px) {
+
+            header {
+                padding: 18px 25px;
+
+                flex-direction: column;
+
+                gap: 15px;
+            }
+
+            .search-card {
+                padding: 30px 25px;
+            }
+
+            .button-container {
+                flex-direction: column;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="logo">
+            🏥 Hospital Management
+        </div>
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="patients.html">
+                Patients
+            </a>
+
+            <a href="login.html">
+                Logout
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- SEARCH SECTION -->
+
+    <main class="search-section">
+
+        <div class="search-card">
+
+            <div class="search-icon">
+                🔍
+            </div>
+
+            <h1>
+                Search Patient
+            </h1>
+
+            <p class="description">
+                Search for a patient using their Patient ID
+            </p>
+
+
+            <!-- SEARCH FORM -->
+
+            <form action="SearchPatientServlet"
+                  method="get">
+
+                <div class="form-group">
+
+                    <label for="patientId">
+                        Patient ID
+                    </label>
+
+                    <input
+                        type="number"
+                        id="patientId"
+                        name="patientId"
+                        placeholder="Enter Patient ID"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="button-container">
+
+                    <button
+                        type="submit"
+                        class="btn search-btn">
+
+                        🔍 Search Patient
+
+                    </button>
+
+
+                    <a
+                        href="patients.html"
+                        class="btn back-btn">
+
+                        ← Back
+
+                    </a>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        © 2026 Hospital Management System
+
+    </footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Management - Hospital Management</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f8fb;
+            color: #333;
+        }
+
+        header {
+            background: #0b6e8e;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin-bottom: 8px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 45px auto;
+        }
+
+        .feature-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 30px 20px;
+            text-align: center;
+            border-radius: 12px;
+            text-decoration: none;
+            color: #333;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            transition: 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .icon {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .feature-card h3 {
+            color: #0b6e8e;
+            margin-bottom: 10px;
+        }
+
+        .feature-card p {
+            font-size: 14px;
+            line-height: 1.5;
+            color: #666;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 35px;
+            padding: 12px 22px;
+            background: #555;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+
+        .back-btn:hover {
+            background: #333;
+        }
+
+        @media (max-width: 800px) {
+            .feature-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 500px) {
+            .feature-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Appointment Management</h1>
+        <p>Schedule and manage patient appointments</p>
+    </header>
+
+    <div class="container">
+
+        <div class="feature-container">
+
+            <a href="add-appointment.html" class="feature-card">
+                <div class="icon">➕</div>
+                <h3>Add Appointment</h3>
+                <p>Schedule a new appointment for a patient.</p>
+            </a>
+
+            <a href="view-appointments.html" class="feature-card">
+                <div class="icon">📋</div>
+                <h3>View Appointments</h3>
+                <p>View all scheduled patient appointments.</p>
+            </a>
+
+            <a href="search-appointment.html" class="feature-card">
+                <div class="icon">🔍</div>
+                <h3>Search Appointment</h3>
+                <p>Search for an appointment using appointment details.</p>
+            </a>
+
+            <a href="update-appointment.html" class="feature-card">
+                <div class="icon">✏️</div>
+                <h3>Update Appointment</h3>
+                <p>Modify the details of an existing appointment.</p>
+            </a>
+
+            <a href="cancel-appointment.html" class="feature-card">
+                <div class="icon">❌</div>
+                <h3>Cancel Appointment</h3>
+                <p>Cancel an existing patient appointment.</p>
+            </a>
+
+            <a href="sort-appointments.html" class="feature-card">
+                <div class="icon">↕️</div>
+                <h3>Sort Appointments</h3>
+                <p>Arrange appointments according to selected criteria.</p>
+            </a>
+
+        </div>
+
+        <a href="index.html" class="back-btn">← Back to Home</a>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Care - Hospital Management</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f8fb;
+            color: #333;
+        }
+
+        header {
+            background: #b42318;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin-bottom: 8px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 45px auto;
+        }
+
+        .feature-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 30px 20px;
+            text-align: center;
+            border-radius: 12px;
+            text-decoration: none;
+            color: #333;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            transition: 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .icon {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .feature-card h3 {
+            color: #b42318;
+            margin-bottom: 10px;
+        }
+
+        .feature-card p {
+            font-size: 14px;
+            line-height: 1.5;
+            color: #666;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 35px;
+            padding: 12px 22px;
+            background: #555;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+
+        .back-btn:hover {
+            background: #333;
+        }
+
+        @media (max-width: 800px) {
+            .feature-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 500px) {
+            .feature-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Emergency Care</h1>
+        <p>Manage emergency patients according to priority</p>
+    </header>
+
+    <div class="container">
+
+        <div class="feature-container">
+
+            <a href="add-emergency.html" class="feature-card">
+                <div class="icon">🚑</div>
+                <h3>Add Emergency Patient</h3>
+                <p>Add a patient requiring immediate emergency care.</p>
+            </a>
+
+            <a href="view-emergency.html" class="feature-card">
+                <div class="icon">📋</div>
+                <h3>View Emergency Patients</h3>
+                <p>View patients currently waiting for emergency care.</p>
+            </a>
+
+            <a href="search-emergency.html" class="feature-card">
+                <div class="icon">🔍</div>
+                <h3>Search Emergency Patient</h3>
+                <p>Search for an emergency patient by patient ID.</p>
+            </a>
+
+            <a href="update-emergency.html" class="feature-card">
+                <div class="icon">✏️</div>
+                <h3>Update Emergency Status</h3>
+                <p>Update the emergency status or priority of a patient.</p>
+            </a>
+
+            <a href="remove-emergency.html" class="feature-card">
+                <div class="icon">❌</div>
+                <h3>Remove Emergency Patient</h3>
+                <p>Remove a patient from the emergency queue.</p>
+            </a>
+
+            <a href="priority-emergency.html" class="feature-card">
+                <div class="icon">⚡</div>
+                <h3>Priority Queue</h3>
+                <p>Arrange emergency patients according to priority.</p>
+            </a>
+
+        </div>
+
+        <a href="index.html" class="back-btn">
+            ← Back to Home
+        </a>
+
+    </div>
+
+</body>
+</html>

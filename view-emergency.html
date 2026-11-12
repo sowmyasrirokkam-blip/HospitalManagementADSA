@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Emergency Patients - Hospital Management</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f8fb;
+            color: #333;
+        }
+
+        header {
+            background: #b42318;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin-bottom: 8px;
+        }
+
+        .container {
+            width: 95%;
+            max-width: 1200px;
+            margin: 40px auto;
+        }
+
+        .table-box {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            overflow-x: auto;
+        }
+
+        .table-box h2 {
+            color: #b42318;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 14px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+            white-space: nowrap;
+        }
+
+        th {
+            background: #b42318;
+            color: white;
+        }
+
+        tr:hover {
+            background: #f5f5f5;
+        }
+
+        .critical {
+            font-weight: bold;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 22px;
+            background: #555;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+
+        .back-btn:hover {
+            background: #333;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>View Emergency Patients</h1>
+        <p>Patients currently waiting for emergency care</p>
+    </header>
+
+    <div class="container">
+
+        <div class="table-box">
+
+            <h2>Emergency Patient List</h2>
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Patient ID</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Gender</th>
+                        <th>Priority</th>
+                        <th>Emergency Condition</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>101</td>
+                        <td>Rahul Kumar</td>
+                        <td>45</td>
+                        <td>Male</td>
+                        <td class="critical">Critical</td>
+                        <td>Severe Chest Pain</td>
+                    </tr>
+
+                    <tr>
+                        <td>102</td>
+                        <td>Priya Reddy</td>
+                        <td>32</td>
+                        <td>Female</td>
+                        <td>High</td>
+                        <td>Accident Injury</td>
+                    </tr>
+
+                    <tr>
+                        <td>103</td>
+                        <td>Arjun Sharma</td>
+                        <td>28</td>
+                        <td>Male</td>
+                        <td>Medium</td>
+                        <td>High Fever</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <a href="emergency.html" class="back-btn">
+            ← Back to Emergency Care
+        </a>
+
+    </div>
+
+</body>
+</html>

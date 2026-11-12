@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Patient Management - Hospital Management System</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f8fb;
+            color: #263238;
+            min-height: 100vh;
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* HEADER */
+
+        header {
+            background: #0b6e8e;
+            color: white;
+
+            padding: 18px 60px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* MAIN */
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+
+            margin: 50px auto;
+
+            flex: 1;
+        }
+
+        .title {
+            text-align: center;
+
+            margin-bottom: 40px;
+        }
+
+        .title h1 {
+            color: #0b6e8e;
+
+            font-size: 36px;
+
+            margin-bottom: 10px;
+        }
+
+        .title p {
+            color: #607d8b;
+
+            font-size: 16px;
+        }
+
+        /* CARDS */
+
+        .cards {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+
+            padding: 30px 20px;
+
+            border-radius: 12px;
+
+            text-align: center;
+
+            text-decoration: none;
+
+            color: #263238;
+
+            box-shadow:
+                0 5px 20px rgba(0, 0, 0, 0.08);
+
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .icon {
+            font-size: 45px;
+
+            margin-bottom: 15px;
+        }
+
+        .card h2 {
+            color: #0b6e8e;
+
+            font-size: 20px;
+
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #607d8b;
+
+            font-size: 14px;
+
+            line-height: 1.5;
+        }
+
+        /* DIFFERENT DELETE CARD */
+
+        .delete-card h2 {
+            color: #c62828;
+        }
+
+        /* BACK BUTTON */
+
+        .back-container {
+            text-align: center;
+
+            margin-top: 40px;
+        }
+
+        .back-btn {
+            display: inline-block;
+
+            padding: 12px 30px;
+
+            background: #263238;
+
+            color: white;
+
+            text-decoration: none;
+
+            border-radius: 6px;
+
+            font-weight: bold;
+        }
+
+        .back-btn:hover {
+            background: #37474f;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #263238;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 20px;
+
+            font-size: 14px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 800px) {
+
+            header {
+                padding: 18px 25px;
+
+                flex-direction: column;
+
+                gap: 15px;
+            }
+
+            .cards {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+        }
+
+        @media (max-width: 500px) {
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="logo">
+            🏥 Hospital Management
+        </div>
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="patients.html">
+                Patients
+            </a>
+
+            <a href="login.html">
+                Logout
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- MAIN -->
+
+    <main class="container">
+
+
+        <div class="title">
+
+            <h1>
+                Patient Management
+            </h1>
+
+            <p>
+                Manage patient records and information
+            </p>
+
+        </div>
+
+
+        <!-- PATIENT OPTIONS -->
+
+        <div class="cards">
+
+
+            <!-- ADD -->
+
+            <a href="add-patient.html"
+               class="card">
+
+                <div class="icon">
+                    ➕
+                </div>
+
+                <h2>
+                    Add Patient
+                </h2>
+
+                <p>
+                    Register a new patient
+                    in the hospital system.
+                </p>
+
+            </a>
+
+
+            <!-- VIEW -->
+
+            <a href="view-patients.html"
+               class="card">
+
+                <div class="icon">
+                    📋
+                </div>
+
+                <h2>
+                    View Patients
+                </h2>
+
+                <p>
+                    View all registered
+                    patient records.
+                </p>
+
+            </a>
+
+
+            <!-- SEARCH -->
+
+            <a href="search-patient.html"
+               class="card">
+
+                <div class="icon">
+                    🔍
+                </div>
+
+                <h2>
+                    Search Patient
+                </h2>
+
+                <p>
+                    Find a patient using
+                    their Patient ID.
+                </p>
+
+            </a>
+
+
+            <!-- UPDATE -->
+
+            <a href="update-patient.html"
+               class="card">
+
+                <div class="icon">
+                    ✏️
+                </div>
+
+                <h2>
+                    Update Patient
+                </h2>
+
+                <p>
+                    Update existing patient
+                    information.
+                </p>
+
+            </a>
+
+
+            <!-- DELETE -->
+
+            <a href="delete-patient.html"
+               class="card delete-card">
+
+                <div class="icon">
+                    🗑️
+                </div>
+
+                <h2>
+                    Delete Patient
+                </h2>
+
+                <p>
+                    Remove a patient record
+                    from the system.
+                </p>
+
+            </a>
+
+
+            <!-- SORT -->
+
+            <a href="view-patients.html"
+               class="card">
+
+                <div class="icon">
+                    🔃
+                </div>
+
+                <h2>
+                    Sort Patients
+                </h2>
+
+                <p>
+                    Sort patient records
+                    by Patient ID.
+                </p>
+
+            </a>
+
+
+        </div>
+
+
+        <!-- BACK -->
+
+        <div class="back-container">
+
+            <a href="index.html"
+               class="back-btn">
+
+                ← Back to Home
+
+            </a>
+
+        </div>
+
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        © 2026 Hospital Management System
+
+    </footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Patient List - Hospital Management System</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f8fb;
+            color: #263238;
+            min-height: 100vh;
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* HEADER */
+
+        header {
+            background: #0b6e8e;
+            color: white;
+
+            padding: 18px 60px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* MAIN */
+
+        .container {
+            width: 92%;
+            max-width: 1200px;
+
+            margin: 50px auto;
+
+            flex: 1;
+        }
+
+        .page-title {
+            text-align: center;
+
+            margin-bottom: 35px;
+        }
+
+        .page-title h1 {
+            color: #0b6e8e;
+
+            font-size: 36px;
+
+            margin-bottom: 10px;
+        }
+
+        .page-title p {
+            color: #607d8b;
+
+            font-size: 15px;
+        }
+
+        /* TABLE CARD */
+
+        .table-card {
+            background: white;
+
+            padding: 25px;
+
+            border-radius: 12px;
+
+            box-shadow:
+                0 5px 20px rgba(0, 0, 0, 0.08);
+
+            overflow-x: auto;
+        }
+
+        /* TABLE */
+
+        table {
+            width: 100%;
+
+            border-collapse: collapse;
+
+            min-width: 800px;
+        }
+
+        thead {
+            background: #0b6e8e;
+
+            color: white;
+        }
+
+        th {
+            padding: 15px 12px;
+
+            text-align: left;
+
+            font-size: 15px;
+        }
+
+        td {
+            padding: 14px 12px;
+
+            border-bottom: 1px solid #e0e6e9;
+
+            color: #455a64;
+
+            font-size: 14px;
+        }
+
+        tbody tr:hover {
+            background: #f1f8fa;
+        }
+
+        /* PATIENT ID */
+
+        .patient-id {
+            font-weight: bold;
+
+            color: #0b6e8e;
+        }
+
+        /* GENDER */
+
+        .gender {
+            display: inline-block;
+
+            padding: 5px 10px;
+
+            border-radius: 15px;
+
+            background: #e0f2f1;
+
+            color: #00695c;
+
+            font-size: 12px;
+
+            font-weight: bold;
+        }
+
+        /* BACK BUTTON */
+
+        .back-container {
+            text-align: center;
+
+            margin-top: 30px;
+        }
+
+        .back-btn {
+            display: inline-block;
+
+            padding: 12px 28px;
+
+            background: #0b6e8e;
+
+            color: white;
+
+            text-decoration: none;
+
+            border-radius: 6px;
+
+            font-weight: bold;
+        }
+
+        .back-btn:hover {
+            background: #07556d;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #263238;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 20px;
+
+            font-size: 14px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 650px) {
+
+            header {
+                padding: 18px 25px;
+
+                flex-direction: column;
+
+                gap: 15px;
+            }
+
+            .container {
+                width: 95%;
+
+                margin: 35px auto;
+            }
+
+            .table-card {
+                padding: 15px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="logo">
+            🏥 Hospital Management
+        </div>
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="patients.html">
+                Patients
+            </a>
+
+            <a href="login.html">
+                Logout
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="container">
+
+
+        <div class="page-title">
+
+            <h1>
+                Patient List
+            </h1>
+
+            <p>
+                View all registered patient records
+            </p>
+
+        </div>
+
+
+        <!-- PATIENT TABLE -->
+
+        <div class="table-card">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            Patient ID
+                        </th>
+
+                        <th>
+                            Name
+                        </th>
+
+                        <th>
+                            Age
+                        </th>
+
+                        <th>
+                            Gender
+                        </th>
+
+                        <th>
+                            Phone
+                        </th>
+
+                        <th>
+                            Address
+                        </th>
+
+                        <th>
+                            Disease
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+                    <!-- SAMPLE PATIENT -->
+
+                    <tr>
+
+                        <td class="patient-id">
+                            101
+                        </td>
+
+                        <td>
+                            Ravi
+                        </td>
+
+                        <td>
+                            25
+                        </td>
+
+                        <td>
+                            <span class="gender">
+                                Male
+                            </span>
+                        </td>
+
+                        <td>
+                            9876543210
+                        </td>
+
+                        <td>
+                            Bhimavaram
+                        </td>
+
+                        <td>
+                            Fever
+                        </td>
+
+                    </tr>
+
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+        <!-- BACK -->
+
+        <div class="back-container">
+
+            <a
+                href="patients.html"
+                class="back-btn">
+
+                ← Back to Patient Management
+
+            </a>
+
+        </div>
+
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        © 2026 Hospital Management System
+
+    </footer>
+
+
+</body>
+
+</html>
